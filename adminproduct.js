@@ -171,7 +171,7 @@ const setupEventListeners = () => {
     document.getElementById('decrease-stock').addEventListener('click', () => {
         const input = document.getElementById('stock-adjustment');
         const currentValue = parseInt(input.value || 0);
-        input.value = currentValue > 0 ? currentValue - 1 : 0;
+        input.value = currentValue - 1;
     });
 
     // Show/hide "Other reason" field
