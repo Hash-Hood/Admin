@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    background: linear-gradient(45deg, #5b3b00, #3a004d);
+    background-size: 200% 200%;
+    animation: gradientMove 6s infinite alternate;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 1.0);
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1002;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(150, 100, 0, 0.8);
+    margin: 0;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #c4a484;
+    margin: 0;
+}
+
+.tracking-container {
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tracking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tracking-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.tracking-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tracking-form button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tracking-form button:hover {
+    background-color: #45a049;
+}
+
+/* Reduced button space for Order Tracking */
+#tracking-info {
+    margin-top: 30px;
+    display: none;
+}
+
+#tracking-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#tracking-info th, #tracking-info td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#tracking-info th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+#tracking-info tr:hover {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .tracking-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .tracking-form input,
+    .tracking-form button {
+        font-size: 1rem;
+    }
+}
