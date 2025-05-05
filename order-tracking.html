@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Order Tracking</title>
+    <link rel="stylesheet" href="admindesign.css">
+</head>
+<body>
+    <header>
+        <div class="home-button">
+            <a href="https://erriswheel.github.io/EauVerCompensate/">Home</a>
+        </div>
+        <h1>Eau Ver Compensate</h1>
+        <p class="tagline">"Arouse the Nose, Command the Room."</p>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="adminproduct.html">Products</a></li>
+                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h3>Order Tracking</h3>
+            </div>
+
+            <!-- Order Tracking Form -->
+            <div class="order-tracking">
+                <h3>Track Orders</h3>
+                <form id="tracking-form">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" placeholder="Enter Order ID" required>
+                    <label for="tracking-no">Tracking Number:</label>
+                    <input type="text" id="tracking-no" placeholder="Enter Tracking Number" required>
+                    <button type="submit">Track Order</button>
+                </form>
+            </div>
+
+            <!-- Order Details Table (this will display after tracking form submission) -->
+            <div class="recent-orders" id="tracking-info" style="display:none;">
+                <h3>Order Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Tracking No</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tracking-table-body">
+                        <!-- Order details will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS File -->
+    <script src="order-tracking.js"></script>
+</body>
+</html>
