@@ -93,7 +93,7 @@ const saveProductsToStorage = () => {
     }
 };
 
-// Initialize the application
+// Initialize the contents of the page
 document.addEventListener('DOMContentLoaded', () => {
     // Retrieve element IDs from HTML
     productsTableBody = document.getElementById('products-table-body');
