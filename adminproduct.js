@@ -221,7 +221,7 @@ const loadProducts = () => {
             <td class="${stockClass}">${product.stock}</td>
             <td class="actions">
                 <button class="edit-btn" data-id="${product.id}">Edit</button>
-                <button class="stock-btn" data-id="${product.id}">Stock</button>
+                <button class="stock-btn" data-id="${product.id}">Update Stock</button>
                 <button class="delete-btn" data-id="${product.id}">Delete</button>
             </td>
         `;
