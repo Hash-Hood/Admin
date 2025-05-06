@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="home-button">
-            <a href="https://erriswheel.github.io/EauVerCompensate/">Home</a>
+            <a href="index.html">Home</a>
         </div>
         <h1>Eau Ver Compensate</h1>
         <p class="tagline">"Arouse the Nose, Command the Room."</p>
@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="https://hash-hood.github.io/Admin/">Dashboard</a></li>
                     <li><a href="https://hash-hood.github.io/Admin/adminproduct" class="active">Products</a></li>
-                    <li><a href="order-tracking.html">Orders</a></li>
+                    <li><a href="#">Orders</a></li>
                 </ul>
             </div>
         </div>
@@ -82,6 +82,7 @@
                                     <th>Gender</th>
                                     <th>Price</th>
                                     <th>Stock</th>
+                                    <th>Sales</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -201,6 +202,53 @@
                             <div class="form-actions">
                                 <button type="submit" class="primary-btn">Update Stock</button>
                                 <button type="button" class="secondary-btn" id="cancel-stock-btn">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Interface for Sales adjustment -->
+                <div id="sales-Edit" class="interface">
+                    <div class="box-content">
+                        <span class="close-box">&times;</span>
+                        <h3>Adjust Sales</h3>
+                        
+                        <form id="sales-form">
+                            <input type="hidden" id="sales-product-id">
+                            
+                            <div class="product-info">
+                                <p><strong>Product:</strong> <span id="sales-product-name"></span></p>
+                                <p><strong>SKU:</strong> <span id="sales-product-sku"></span></p>
+                                <p><strong>Current Sales:</strong> <span id="sales-current-amount"></span></p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sales-adjustment">Adjustment:</label>
+                                <div class="stock-adjustment-controls">
+                                    <button type="button" id="decrease-sales">-</button>
+                                    <input type="number" id="sales-adjustment" name="adjustment" value="0">
+                                    <button type="button" id="increase-sales">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sales-reason">Reason:</label>
+                                <select id="sales-reason" name="reason">
+                                    <option value="new-sale">New Sale</option>
+                                    <option value="return">Customer Return</option>
+                                    <option value="correction">Data Correction</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" id="sales-other-reason-group" style="display: none;">
+                                <label for="sales-other-reason">Specify Reason:</label>
+                                <input type="text" id="sales-other-reason" name="otherReason">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="primary-btn">Update Sales</button>
+                                <button type="button" class="secondary-btn" id="cancel-sales-btn">Cancel</button>
                             </div>
                         </form>
                     </div>
