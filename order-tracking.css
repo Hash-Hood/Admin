@@ -12,8 +12,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
     font-family: 'Playfair Display', serif;
     color: white;
     background: linear-gradient(45deg, #5b3b00, #3a004d);
@@ -21,17 +19,64 @@ body {
     animation: gradientMove 6s infinite alternate;
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 .container {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
+/* ========== SIDEBAR ========== */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid #3d5061;
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+}
+
+.sidebar-menu {
+    padding: 20px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background-color: #34495e;
+}
+
+/* ========== HEADER ========== */
 header {
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 15px 0;
     background: rgba(0, 0, 0, 1.0);
@@ -47,50 +92,58 @@ h1 {
     font-weight: 700;
     letter-spacing: 2px;
     text-shadow: 2px 2px 10px rgba(150, 100, 0, 0.8);
-    margin: 0;
 }
 
 .tagline {
     font-style: italic;
     font-size: 1.1rem;
     color: #c4a484;
-    margin: 0;
 }
 
-.tracking-container {
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* ========== MAIN CONTENT ========== */
+.main-content {
+    flex: 1;
+    padding: 40px;
 }
 
-.tracking-container h3 {
-    font-size: 1.8rem;
+.header h3 {
+    font-size: 2rem;
     margin-bottom: 20px;
+}
+
+/* ========== TRACKING FORM ========== */
+.order-tracking {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
     color: #333;
 }
 
-.tracking-form {
+.order-tracking h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#tracking-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.tracking-form label {
+#tracking-form label {
     font-weight: bold;
-    color: #333;
 }
 
-.tracking-form input {
+#tracking-form input {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.tracking-form button {
+#tracking-form button {
     padding: 12px;
     font-size: 1rem;
     background-color: #4CAF50;
@@ -101,11 +154,35 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.tracking-form button:hover {
+#tracking-form button:hover {
     background-color: #45a049;
 }
 
-/* Reduced button space for Order Tracking */
+/* ========== TRACKING SUMMARY (ABOVE TABLE) ========== */
+.tracking-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.tracking-summary .order-id,
+.tracking-summary .tracking-no {
+    flex: 1;
+    text-align: left;
+}
+
+.tracking-summary .tracking-no {
+    text-align: right;
+}
+
+/* ========== ORDER DETAILS TABLE ========== */
 #tracking-info {
     margin-top: 30px;
     display: none;
@@ -117,7 +194,8 @@ h1 {
     margin-top: 15px;
 }
 
-#tracking-info th, #tracking-info td {
+#tracking-info th,
+#tracking-info td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: left;
@@ -130,9 +208,19 @@ h1 {
 
 #tracking-info tr:hover {
     background-color: #f9f9f9;
+    transition: background 0.3s;
 }
 
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
     .tracking-container {
         width: 90%;
         padding: 15px;
@@ -141,5 +229,17 @@ h1 {
     .tracking-form input,
     .tracking-form button {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .tracking-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .tracking-summary .tracking-no {
+        text-align: left;
     }
 }
