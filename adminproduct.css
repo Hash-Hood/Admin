@@ -269,6 +269,12 @@ tr:hover {
     height: 27.6px;
 }
 
+.sales-btn {
+    background-color: #752898;
+    color: white;
+    height: 27.6px;
+}
+
 .delete-btn {
     background-color: #f44336;
     color: white;

@@ -4,37 +4,37 @@ let products = [];
 // Default products to use if localStorage is empty
 const defaultProducts = [
     // male perfumes
-    { id: "0001", name: "Apex", gender: "male", type: "eau-de-parfum", price: 4499.99, description: "Apex energizes with sharp citrus and bold aromatic woods.", imageUrl: "Images/Men/Apex.png", sku: "M01", stock: 100 },
-    { id: "0002", name: "Ascent", gender: "male", type: "eau-de-parfum", price: 3999.99, description: "Ascent uplifts with crisp bergamot and refined oakmoss.", imageUrl: "Images/Men/Ascent.png", sku: "M02", stock: 100 },
-    { id: "0003", name: "Dominion", gender: "male", type: "eau-de-parfum", price: 6499.99, description: "Dominion commands attention with smoky vetiver and amber.", imageUrl: "Images/Men/Dominion.png", sku: "M03", stock: 100 },
-    { id: "0004", name: "Emberline", gender: "male", type: "eau-de-parfum", price: 5499.99, description: "Emberline glows with warm spices and toasted cedarwood.", imageUrl: "Images/Men/Emberline.png", sku: "M04", stock: 100 },
-    { id: "0005", name: "Forge", gender: "male", type: "eau-de-parfum", price: 3499.99, description: "Forge blends metallic accords with deep resins and musk.", imageUrl: "Images/Men/Forge.png", sku: "M05", stock: 100 },
-    { id: "0006", name: "Halo Steel", gender: "male", type: "eau-de-parfum", price: 5999.99, description: "Halo Steel shines with icy mint and cool lavender tones.", imageUrl: "Images/Men/Halo Steel.png", sku: "M06", stock: 100 },
-    { id: "0007", name: "Iron Drift", gender: "male", type: "eau-de-parfum", price: 2999.99, description: "Iron Drift flows with smoky incense and rugged patchouli.", imageUrl: "Images/Men/Iron Drift.png", sku: "M07", stock: 100 },
-    { id: "0008", name: "Lucent Ash", gender: "male", type: "eau-de-parfum", price: 4749.99, description: "Lucent Ash smolders with charred woods and vetiver spice.", imageUrl: "Images/Men/Lucent Ash.png", sku: "M08", stock: 100 },
-    { id: "0009", name: "Monsoon", gender: "male", type: "eau-de-parfum", price: 2499.99, description: "Monsoon refreshes with aquatic notes and herbal zest.", imageUrl: "Images/Men/Monsoon.png", sku: "M09", stock: 100 },
-    { id: "0010", name: "Noir Brave", gender: "male", type: "eau-de-parfum", price: 7499.99, description: "Noir Brave captivates with dark leather and smoky amber.", imageUrl: "Images/Men/Noir Brave.png", sku: "M10", stock: 100 },
-    { id: "0011", name: "Pulse", gender: "male", type: "eau-de-parfum", price: 5499.99, description: "Pulse races with zesty ginger and dynamic black pepper notes.", imageUrl: "Images/Men/Pulse.png", sku: "M11", stock: 100 },
-    { id: "0012", name: "Quarry", gender: "male", type: "eau-de-parfum", price: 2999.99, description: "Quarry grounds with mineral accords and smooth suede.", imageUrl: "Images/Men/Quarry.png", sku: "M12", stock: 100 },
-    { id: "0013", name: "Shade", gender: "male", type: "eau-de-parfum", price: 4249.99, description: "Shade veils with dark plum, patchouli, and smoky vanilla.", imageUrl: "Images/Men/Shade.png", sku: "M13", stock: 100 },
-    { id: "0014", name: "Vantage", gender: "male", type: "eau-de-parfum", price: 3699.99, description: "Vantage ascends with crisp apple and refined ambergris.", imageUrl: "Images/Men/Vantage.png", sku: "M14", stock: 100 },
-    { id: "0015", name: "Volt", gender: "male", type: "eau-de-parfum", price: 4999.99, description: "Volt sparks with electrifying citrus and spicy cardamom.", imageUrl: "Images/Men/Volt.png", sku: "M15", stock: 100 },
+    { id: "0001", name: "Apex", gender: "male", type: "eau-de-parfum", price: 4499.99, description: "Apex energizes with sharp citrus and bold aromatic woods.", imageUrl: "Images/Men/Apex.png", sku: "M01", stock: 100, amountSold: 0 },
+    { id: "0002", name: "Ascent", gender: "male", type: "eau-de-parfum", price: 3999.99, description: "Ascent uplifts with crisp bergamot and refined oakmoss.", imageUrl: "Images/Men/Ascent.png", sku: "M02", stock: 100, amountSold: 0 },
+    { id: "0003", name: "Dominion", gender: "male", type: "eau-de-parfum", price: 6499.99, description: "Dominion commands attention with smoky vetiver and amber.", imageUrl: "Images/Men/Dominion.png", sku: "M03", stock: 100, amountSold: 0 },
+    { id: "0004", name: "Emberline", gender: "male", type: "eau-de-parfum", price: 5499.99, description: "Emberline glows with warm spices and toasted cedarwood.", imageUrl: "Images/Men/Emberline.png", sku: "M04", stock: 100, amountSold: 0 },
+    { id: "0005", name: "Forge", gender: "male", type: "eau-de-parfum", price: 3499.99, description: "Forge blends metallic accords with deep resins and musk.", imageUrl: "Images/Men/Forge.png", sku: "M05", stock: 100, amountSold: 0 },
+    { id: "0006", name: "Halo Steel", gender: "male", type: "eau-de-parfum", price: 5999.99, description: "Halo Steel shines with icy mint and cool lavender tones.", imageUrl: "Images/Men/Halo Steel.png", sku: "M06", stock: 100, amountSold: 0 },
+    { id: "0007", name: "Iron Drift", gender: "male", type: "eau-de-parfum", price: 2999.99, description: "Iron Drift flows with smoky incense and rugged patchouli.", imageUrl: "Images/Men/Iron Drift.png", sku: "M07", stock: 100, amountSold: 0 },
+    { id: "0008", name: "Lucent Ash", gender: "male", type: "eau-de-parfum", price: 4749.99, description: "Lucent Ash smolders with charred woods and vetiver spice.", imageUrl: "Images/Men/Lucent Ash.png", sku: "M08", stock: 100, amountSold: 0 },
+    { id: "0009", name: "Monsoon", gender: "male", type: "eau-de-parfum", price: 2499.99, description: "Monsoon refreshes with aquatic notes and herbal zest.", imageUrl: "Images/Men/Monsoon.png", sku: "M09", stock: 100, amountSold: 0 },
+    { id: "0010", name: "Noir Brave", gender: "male", type: "eau-de-parfum", price: 7499.99, description: "Noir Brave captivates with dark leather and smoky amber.", imageUrl: "Images/Men/Noir Brave.png", sku: "M10", stock: 100, amountSold: 0 },
+    { id: "0011", name: "Pulse", gender: "male", type: "eau-de-parfum", price: 5499.99, description: "Pulse races with zesty ginger and dynamic black pepper notes.", imageUrl: "Images/Men/Pulse.png", sku: "M11", stock: 100, amountSold: 0 },
+    { id: "0012", name: "Quarry", gender: "male", type: "eau-de-parfum", price: 2999.99, description: "Quarry grounds with mineral accords and smooth suede.", imageUrl: "Images/Men/Quarry.png", sku: "M12", stock: 100, amountSold: 0 },
+    { id: "0013", name: "Shade", gender: "male", type: "eau-de-parfum", price: 4249.99, description: "Shade veils with dark plum, patchouli, and smoky vanilla.", imageUrl: "Images/Men/Shade.png", sku: "M13", stock: 100, amountSold: 0 },
+    { id: "0014", name: "Vantage", gender: "male", type: "eau-de-parfum", price: 3699.99, description: "Vantage ascends with crisp apple and refined ambergris.", imageUrl: "Images/Men/Vantage.png", sku: "M14", stock: 100, amountSold: 0 },
+    { id: "0015", name: "Volt", gender: "male", type: "eau-de-parfum", price: 4999.99, description: "Volt sparks with electrifying citrus and spicy cardamom.", imageUrl: "Images/Men/Volt.png", sku: "M15", stock: 100, amountSold: 0 },
     // female perfumes
-    { id: "0016", name: "Aube de Lune", gender: "female", type: "eau-de-parfum", price: 3999.99, description: "Aube de Lune glows with soft iris and warm vanilla musk.", imageUrl: "Images/Women/Aube de Lune.png", sku: "F16", stock: 100 },
-    { id: "0017", name: "Bloom Drift", gender: "female", type: "eau-de-parfum", price: 2999.99, description: "Bloom Drift dances with peony petals and bright citrus zest.", imageUrl: "Images/Women/Bloom Drift.png", sku: "F17", stock: 100 },
-    { id: "0018", name: "Coral Muse", gender: "female", type: "eau-de-parfum", price: 4249.99, description: "Coral Muse inspires with juicy nectarine and amber rose.", imageUrl: "Images/Women/Coral Muse.png", sku: "F18", stock: 100 },
-    { id: "0019", name: "Crimson Veil", gender: "female", type: "eau-de-parfum", price: 7499.99, description: "Crimson Veil envelops with red berries, oud, and dark florals.", imageUrl: "Images/Women/Crimson Veil.png", sku: "F19", stock: 100 },
-    { id: "0020", name: "Dahlia Smoke", gender: "female", type: "eau-de-parfum", price: 4999.99, description: "Dahlia Smoke blends smoky florals and creamy sandalwood.", imageUrl: "Images/Women/Dahlia Smoke.png", sku: "F20", stock: 100 },
-    { id: "0021", name: "Elan Frost", gender: "female", type: "eau-de-parfum", price: 3499.99, description: "Elan Frost shimmers with cool violet and icy white tea.", imageUrl: "Images/Women/Elan Frost.png", sku: "F21", stock: 100 },
-    { id: "0022", name: "Fleur Mirage", gender: "female", type: "eau-de-parfum", price: 5499.99, description: "Fleur Mirage intrigues with jasmine, saffron, and amber woods.", imageUrl: "Images/Women/Fleur Mirage.png", sku: "F22", stock: 100 },
-    { id: "0023", name: "Haze de Thé", gender: "female", type: "eau-de-parfum", price: 4749.99, description: "Haze de Thé softens with green tea, bergamot, and white musk.", imageUrl: "Images/Women/Haze de Thé.png", sku: "F23", stock: 100 },
-    { id: "0024", name: "Ivory Dust", gender: "female", type: "eau-de-parfum", price: 5999.99, description: "Ivory Dust glistens with white florals and powdered vanilla.", imageUrl: "Images/Women/Ivory Dust.png", sku: "F24", stock: 100 },
-    { id: "0025", name: "Lueur Saffron", gender: "female", type: "eau-de-parfum", price: 6499.99, description: "Lueur Saffron radiates with saffron threads and honeyed rose.", imageUrl: "Images/Women/Lueur Saffron.png", sku: "F25", stock: 100 },
-    { id: "0026", name: "Rose Noiré", gender: "female", type: "eau-de-parfum", price: 4499.99, description: "Rose Noiré enchants with black rose and smoky incense woods.", imageUrl: "Images/Women/Rose Noiré.png", sku: "F26", stock: 100 },
-    { id: "0027", name: "Silver Lark", gender: "female", type: "eau-de-parfum", price: 3999.99, description: "Silver Lark sparkles with crisp pear and white jasmine bloom.", imageUrl: "Images/Women/Silver Lark.png", sku: "F27", stock: 100 },
-    { id: "0028", name: "Soleil Vellum", gender: "female", type: "eau-de-parfum", price: 3499.99, description: "Soleil Vellum warms with creamy coconut and golden amber.", imageUrl: "Images/Women/Soleil Vellum.png", sku: "F28", stock: 100 },
-    { id: "0029", name: "Tendre Flame", gender: "female", type: "eau-de-parfum", price: 3249.99, description: "Tendre Flame caresses with soft woods and delicate iris.", imageUrl: "Images/Women/Tendre Flame.png", sku: "F29", stock: 100 },
-    { id: "0030", name: "Velvet Echo", gender: "female", type: "eau-de-parfum", price: 4999.99, description: "Velvet Echo lingers with velvety musk and warm plum accord.", imageUrl: "Images/Women/Velvet Echo.png", sku: "F30", stock: 100 },
+    { id: "0016", name: "Aube de Lune", gender: "female", type: "eau-de-parfum", price: 3999.99, description: "Aube de Lune glows with soft iris and warm vanilla musk.", imageUrl: "Images/Women/Aube de Lune.png", sku: "F16", stock: 100, amountSold: 0 },
+    { id: "0017", name: "Bloom Drift", gender: "female", type: "eau-de-parfum", price: 2999.99, description: "Bloom Drift dances with peony petals and bright citrus zest.", imageUrl: "Images/Women/Bloom Drift.png", sku: "F17", stock: 100, amountSold: 0 },
+    { id: "0018", name: "Coral Muse", gender: "female", type: "eau-de-parfum", price: 4249.99, description: "Coral Muse inspires with juicy nectarine and amber rose.", imageUrl: "Images/Women/Coral Muse.png", sku: "F18", stock: 100, amountSold: 0 },
+    { id: "0019", name: "Crimson Veil", gender: "female", type: "eau-de-parfum", price: 7499.99, description: "Crimson Veil envelops with red berries, oud, and dark florals.", imageUrl: "Images/Women/Crimson Veil.png", sku: "F19", stock: 100, amountSold: 0 },
+    { id: "0020", name: "Dahlia Smoke", gender: "female", type: "eau-de-parfum", price: 4999.99, description: "Dahlia Smoke blends smoky florals and creamy sandalwood.", imageUrl: "Images/Women/Dahlia Smoke.png", sku: "F20", stock: 100, amountSold: 0 },
+    { id: "0021", name: "Elan Frost", gender: "female", type: "eau-de-parfum", price: 3499.99, description: "Elan Frost shimmers with cool violet and icy white tea.", imageUrl: "Images/Women/Elan Frost.png", sku: "F21", stock: 100, amountSold: 0 },
+    { id: "0022", name: "Fleur Mirage", gender: "female", type: "eau-de-parfum", price: 5499.99, description: "Fleur Mirage intrigues with jasmine, saffron, and amber woods.", imageUrl: "Images/Women/Fleur Mirage.png", sku: "F22", stock: 100, amountSold: 0 },
+    { id: "0023", name: "Haze de Thé", gender: "female", type: "eau-de-parfum", price: 4749.99, description: "Haze de Thé softens with green tea, bergamot, and white musk.", imageUrl: "Images/Women/Haze de Thé.png", sku: "F23", stock: 100, amountSold: 0 },
+    { id: "0024", name: "Ivory Dust", gender: "female", type: "eau-de-parfum", price: 5999.99, description: "Ivory Dust glistens with white florals and powdered vanilla.", imageUrl: "Images/Women/Ivory Dust.png", sku: "F24", stock: 100, amountSold: 0 },
+    { id: "0025", name: "Lueur Saffron", gender: "female", type: "eau-de-parfum", price: 6499.99, description: "Lueur Saffron radiates with saffron threads and honeyed rose.", imageUrl: "Images/Women/Lueur Saffron.png", sku: "F25", stock: 100, amountSold: 0 },
+    { id: "0026", name: "Rose Noiré", gender: "female", type: "eau-de-parfum", price: 4499.99, description: "Rose Noiré enchants with black rose and smoky incense woods.", imageUrl: "Images/Women/Rose Noiré.png", sku: "F26", stock: 100, amountSold: 0 },
+    { id: "0027", name: "Silver Lark", gender: "female", type: "eau-de-parfum", price: 3999.99, description: "Silver Lark sparkles with crisp pear and white jasmine bloom.", imageUrl: "Images/Women/Silver Lark.png", sku: "F27", stock: 100, amountSold: 0 },
+    { id: "0028", name: "Soleil Vellum", gender: "female", type: "eau-de-parfum", price: 3499.99, description: "Soleil Vellum warms with creamy coconut and golden amber.", imageUrl: "Images/Women/Soleil Vellum.png", sku: "F28", stock: 100, amountSold: 0 },
+    { id: "0029", name: "Tendre Flame", gender: "female", type: "eau-de-parfum", price: 3249.99, description: "Tendre Flame caresses with soft woods and delicate iris.", imageUrl: "Images/Women/Tendre Flame.png", sku: "F29", stock: 100, amountSold: 0 },
+    { id: "0030", name: "Velvet Echo", gender: "female", type: "eau-de-parfum", price: 4999.99, description: "Velvet Echo lingers with velvety musk and warm plum accord.", imageUrl: "Images/Women/Velvet Echo.png", sku: "F30", stock: 100, amountSold: 0 },
 ];
 
 // Display
@@ -42,7 +42,7 @@ const ITEMS_PER_PAGE = 10;
 let currentPage = 1;
 let filteredProducts = [];
 
-// Declaration of Elements
+// Declaration of Element variables
 let productsTableBody;
 let PageControl;
 let productEdit;
@@ -57,6 +57,10 @@ let sortBySelect;
 let addProductBtn;
 let adjustmentReason;
 let otherReasonGroup;
+let salesEdit;
+let salesForm;
+let salesReason;
+let salesOtherReasonGroup;
 
 // LocalStorage key
 const STORAGE_KEY = 'perfumeProducts';
@@ -82,7 +86,7 @@ const loadProductsFromStorage = () => {
     }
 };
 
-// Save products array data to localStorage
+// Save products array data to localStorage, stringify is used since localStorage can only store strings
 const saveProductsToStorage = () => {
     try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
@@ -110,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
     addProductBtn = document.getElementById('add-product-btn');
     adjustmentReason = document.getElementById('adjustment-reason');
     otherReasonGroup = document.getElementById('other-reason-group');
+    salesEdit = document.getElementById('sales-Edit');
+    salesForm = document.getElementById('sales-form');
+    salesReason = document.getElementById('sales-reason');
+    salesOtherReasonGroup = document.getElementById('sales-other-reason-group');
     
     // Load products from localStorage
     loadProductsFromStorage();
@@ -153,12 +161,19 @@ const setupEventListeners = () => {
         updateStock();
     });
 
+    // Sales form submission
+    salesForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        updateSales();
+    });
+
     // Close the box when clicking on 'x' or 'Cancel' buttons
-    const closeButtons = document.querySelectorAll('.close-box, #cancel-btn, #cancel-stock-btn');
+    const closeButtons = document.querySelectorAll('.close-box, #cancel-btn, #cancel-stock-btn, #cancel-sales-btn');
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             productEdit.style.display = 'none';
             stockEdit.style.display = 'none';
+            salesEdit.style.display = 'none';
         });
     });
 
@@ -174,9 +189,26 @@ const setupEventListeners = () => {
         input.value = currentValue - 1;
     });
 
-    // Show/hide "Other reason" field
+    // Sales adjustment controls
+    document.getElementById('increase-sales').addEventListener('click', () => {
+        const input = document.getElementById('sales-adjustment');
+        input.value = parseInt(input.value || 0) + 1;
+    });
+
+    document.getElementById('decrease-sales').addEventListener('click', () => {
+        const input = document.getElementById('sales-adjustment');
+        const currentValue = parseInt(input.value || 0);
+        input.value = currentValue - 1;
+    });
+
+    // Show/hide "Other reason" field for stock
     adjustmentReason.addEventListener('change', () => {
         otherReasonGroup.style.display = adjustmentReason.value === 'other' ? 'block' : 'none';
+    });
+
+    // Show/hide "Other reason" field for sales
+    salesReason.addEventListener('change', () => {
+        salesOtherReasonGroup.style.display = salesReason.value === 'other' ? 'block' : 'none';
     });
 
     // Close the box when clicking outside of it
@@ -186,6 +218,9 @@ const setupEventListeners = () => {
         }
         if (e.target === stockEdit) {
             stockEdit.style.display = 'none';
+        }
+        if (e.target === salesEdit) {
+            salesEdit.style.display = 'none';
         }
     });
 };
@@ -219,9 +254,11 @@ const loadProducts = () => {
             <td>${product.gender === 'male' ? 'Male' : 'Female'}</td>
             <td>Php${product.price.toFixed(2)}</td>
             <td class="${stockClass}">${product.stock}</td>
+            <td>${product.amountSold || 0}</td>
             <td class="actions">
                 <button class="edit-btn" data-id="${product.id}">Edit</button>
                 <button class="stock-btn" data-id="${product.id}">Stock</button>
+                <button class="sales-btn" data-id="${product.id}">Sales</button>
                 <button class="delete-btn" data-id="${product.id}">Delete</button>
             </td>
         `;
@@ -253,6 +290,15 @@ const setupActionButtons = () => {
         button.addEventListener('click', (e) => {
             const productId = e.target.getAttribute('data-id');
             openstockEdit(productId);
+        });
+    });
+
+    // Sales adjustment buttons
+    const salesButtons = document.querySelectorAll('.sales-btn');
+    salesButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productId = e.target.getAttribute('data-id');
+            openSalesEdit(productId);
         });
     });
     
@@ -433,6 +479,31 @@ const openstockEdit = (productId) => {
     }
 };
 
+// Open the interface for adjusting sales
+const openSalesEdit = (productId) => {
+    // Find the product
+    const product = products.find(p => p.id === productId);
+    
+    if (product) {
+        // Initialize amountSold if it doesn't exist
+        if (product.amountSold === undefined) {
+            product.amountSold = 0;
+        }
+        
+        // Fill the form with product data
+        document.getElementById('sales-product-id').value = product.id;
+        document.getElementById('sales-product-name').textContent = product.name;
+        document.getElementById('sales-product-sku').textContent = product.sku;
+        document.getElementById('sales-current-amount').textContent = product.amountSold;
+        document.getElementById('sales-adjustment').value = 0;
+        document.getElementById('sales-reason').value = 'new-sale';
+        salesOtherReasonGroup.style.display = 'none';
+        
+        // Show the box form for adjusting sales
+        salesEdit.style.display = 'block';
+    }
+};
+
 // Save product (add new or update existing)
 const saveProduct = () => {
     // Get form data
@@ -445,13 +516,16 @@ const saveProduct = () => {
         price: parseFloat(document.getElementById('product-price').value),
         stock: parseInt(document.getElementById('product-stock').value),
         description: document.getElementById('product-description').value,
-        imageUrl: document.getElementById('product-image').value
+        imageUrl: document.getElementById('product-image').value,
+        amountSold: 0
     };
     
     // Find if product already exists
     const existingProductIndex = products.findIndex(p => p.id === formData.id);
     
     if (existingProductIndex !== -1) {
+        // Preserve existing amountSold for existing products
+        formData.amountSold = products[existingProductIndex].amountSold || 0;
         // Update existing product
         products[existingProductIndex] = formData;
         showNotification('Product updated successfully');
@@ -496,6 +570,42 @@ const updateStock = () => {
         
         // Close the box form/interface
         stockEdit.style.display = 'none';
+        
+        // Refresh the product list
+        loadProducts();
+    }
+};
+
+// Update product sales
+const updateSales = () => {
+    const productId = document.getElementById('sales-product-id').value;
+    const adjustment = parseInt(document.getElementById('sales-adjustment').value);
+    const reason = document.getElementById('sales-reason').value;
+    
+    // Find the product
+    const productIndex = products.findIndex(p => p.id === productId);
+    
+    if (productIndex !== -1) {
+        // Initialize amountSold if it doesn't exist
+        if (products[productIndex].amountSold === undefined) {
+            products[productIndex].amountSold = 0;
+        }
+        
+        // Update sales amount
+        products[productIndex].amountSold += adjustment;
+        
+        // Ensure sales doesn't go negative
+        if (products[productIndex].amountSold < 0) {
+            products[productIndex].amountSold = 0;
+        }
+        
+        // Save changes to localStorage
+        saveProductsToStorage();
+        
+        showNotification(`Sales updated: ${adjustment > 0 ? '+' : ''}${adjustment} units`);
+        
+        // Close the box form/interface
+        salesEdit.style.display = 'none';
         
         // Refresh the product list
         loadProducts();
