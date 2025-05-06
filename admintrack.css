@@ -115,12 +115,13 @@ h1 {
     font-weight: 700;
     letter-spacing: 2px;
     text-shadow: 2px 2px 10px rgba(150, 100, 0, 0.8);
+    margin: 0;
 }
 
 .tagline {
     font-style: italic;
     font-size: 1.1rem;
-    color: #c4a484;
+    color: white;
 }
 
 /* ========== MAIN CONTENT ========== */
