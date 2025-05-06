@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Order Tracking</title>
-     <link rel="stylesheet" href="admintrack.css">
+    <link rel="stylesheet" href="admintrack.css">
 </head>
 <body>
     <header>
@@ -28,17 +28,17 @@
                 </ul>
             </div>
         </div>
-        
+
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
                 <h3>Order Tracking</h3>
             </div>
 
-<!--track-->
-            <div class="recent-orders" id="tracking-info" style="display:none;">
+            <!-- Orders Table -->
+            <div class="recent-orders" id="tracking-info">
                 <h3>Order Details</h3>
-                <table>
+                <table border="1">
                     <thead>
                         <tr>
                             <th>Customer</th>
@@ -48,14 +48,14 @@
                             <th>Amount</th>
                         </tr>
                     </thead>
-                    <tbody id="tracking-table-body">
-                        <!-- Order details -->
+                    <tbody id="order-table-body">
+                        <!-- Order details will be inserted here -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <script src="order-tracking.js"></script>
+    <script src="admintrack.js"></script>
 </body>
 </html>
